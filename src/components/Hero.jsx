@@ -2,8 +2,8 @@ import arrowDown from '../assets/arrowDown.svg';
 
 export default function Hero() {
   return (
-    <section>
-      <div className='h-[80vh] w-full flex justify-center items-center'>
+    <section className='overscroll-x-none'>
+      <div className='h-[76vh] w-full flex justify-center items-center'>
         <div className='relative w-[90vw] h-[90vw] sm:w-[60vw] sm:h-[60vw] lg:w-[30vw] lg:h-[30vw] rounded-full bg-swirl-200 flex flex-col justify-center items-center'>
           <h2 className='absolute top-8 right-4 font-lora italic'>
             Frontend Developer <br /> & Designer
@@ -19,7 +19,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center pb-5">
         <span className="font-lora uppercase">Discover my work</span>
         <img src={arrowDown} alt="Arrow down"/>
       </div>

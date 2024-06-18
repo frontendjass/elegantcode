@@ -12,19 +12,19 @@ export default function Navbar() {
         setMenuIsOpen(prev => !prev)
     }
 
-    const menuStatus = menuIsOpen ? '' : 'hidden';
+    const menuStatus = menuIsOpen ? 'right-0' : 'right-[-500px]';
     const menuLogo = menuIsOpen ? menuClose : menuOpen;
 
     return (
         <nav className={`relative flex justify-between items-center w-screen p-5`}>
             <Logo />
-            <ul className={`${menuStatus} absolute top-1 flex flex-col justify-center items-center w-full h-screen z-[-1]`}>
+            <ul className={`${menuStatus} bg-swirl-200 fixed top-1 flex flex-col justify-center items-center w-full h-screen z-[1]`}>
                 <NavbarLink name='About' link='#'/>
                 <NavbarLink name='Services' link='#'/>
                 <NavbarLink name='Portfolio' link='#'/>
                 <NavbarLink name='Contact Me' link='#'/>
             </ul>
-            <button onClick={handleClick}><img src={menuLogo} alt="Menu logo" className="w-[40px]"/></button>
+            <button onClick={handleClick} className="fixed right-2 z-10"><img src={menuLogo} alt="Menu logo" className="w-[40px]"/></button>
         </nav>
     )
 }
