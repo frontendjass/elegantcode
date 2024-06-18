@@ -1,4 +1,5 @@
 import Service from './Service';
+import serviceData from '../data/serviceData';
 
 export default function Services() {
   return (
@@ -8,12 +9,15 @@ export default function Services() {
           What I offer
         </h2>
       </header>
-      <div className='p-5'>
-        <Service title='Frontend Development'/>
-        <Service title='Responsive Web Design'/>
-        <Service title='UI/UX Design'/>
-        <Service title='Website Optimization'/>
-      </div>
+      <ul className='p-5'>
+        {serviceData.map((service, index) => (
+          <Service
+            title={service.title}
+            description={service.description}
+            key={index}
+          />
+        ))}
+      </ul>
     </section>
   );
 }

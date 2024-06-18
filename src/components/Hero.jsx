@@ -2,7 +2,7 @@ import arrowDown from '../assets/arrowDown.svg';
 
 export default function Hero() {
   return (
-    <section className='overscroll-x-none'>
+    <section className='overscroll-x-none bg-[#F3EEEA]'>
       <div className='h-[76vh] w-full flex justify-center items-center'>
         <div className='relative w-[90vw] h-[90vw] sm:w-[60vw] sm:h-[60vw] lg:w-[30vw] lg:h-[30vw] rounded-full bg-swirl-200 flex flex-col justify-center items-center'>
           <h2 className='absolute top-8 right-4 font-lora italic'>

@@ -16,7 +16,7 @@ export default function Navbar() {
     const menuLogo = menuIsOpen ? menuClose : menuOpen;
 
     return (
-        <nav className={`relative flex justify-between items-center w-screen p-5`}>
+        <nav className={`relative flex justify-between items-center w-screen p-5 bg-[#F3EEEA]`}>
             <Logo />
             <ul className={`${menuStatus} bg-swirl-200 fixed top-1 flex flex-col justify-center items-center w-full h-screen z-[1]`}>
                 <NavbarLink name='About' link='#'/>
