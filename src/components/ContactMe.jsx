@@ -4,7 +4,7 @@ export default function ContactMe() {
   const inputStyle = 'w-full p-2 my-1 font-lora';
 
   return (
-    <section className='bg-swirl-200 '>
+    <section className='bg-swirl-200 ' id='contact'>
       <div className='bg-swirl-100 rounded-t-3xl'>
         <header className='px-5 pt-9'>
           <h2 className='font-lora uppercase text-shark-950 text-5xl'>
@@ -44,7 +44,7 @@ export default function ContactMe() {
           </div>
           <div className='mt-4'>
             <h4 className='text-shark-850 text-3xl font-lora mb-2'>I need:</h4>
-            <div className='grid grid-col-4 grid-flow-col gap-4 grid-rows-2'>
+            <div className='grid grid-cols-3 gap-4 grid-rows-2'>
               <FormButton buttonText='A Website' />
               <FormButton buttonText='React Integration' />
               <FormButton buttonText='SEO' />
@@ -58,7 +58,7 @@ export default function ContactMe() {
             <h4 className='text-shark-850 text-3xl font-lora mb-2'>
               Tell me about your vision:
             </h4>
-            <textarea className='w-full h-52'></textarea>
+            <textarea className='w-full h-52 p-2' placeholder='Describe your project goals, ideas, and desired outcomes. What are your key features? Who is your target audience? How do you envision the user experience? Feel free to share any specific requirements or inspirations.'></textarea>
           </div>
           <div className='flex justify-end mt-2'>
             <button className='text-sm bg-shark-950 text-swirl-50 p-2 rounded-md font-lora w-24 h-12'>
