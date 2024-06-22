@@ -7,7 +7,7 @@ export default function ContactMe() {
 
   return (
     <section className='bg-swirl-200 md:flex' id='contact'>
-      <div className='bg-swirl-100 rounded-t-3xl'>
+      <div className='bg-swirl-100 rounded-t-3xl md:px-10 py-5'>
         <div className='md:flex items-center'>
           <div className='lg:w-2/4'>
             <header className='px-5 pt-9'>
@@ -66,7 +66,7 @@ export default function ContactMe() {
                   Tell me about your vision:
                 </h4>
                 <textarea
-                  className='w-full h-52 p-2'
+                  className='w-full min-h-40 p-2'
                   placeholder='Describe your project goals, ideas, and desired outcomes. What are your key features? Who is your target audience? How do you envision the user experience? Feel free to share any specific requirements or inspirations.'
                 ></textarea>
               </div>

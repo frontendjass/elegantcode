@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <>
     <nav
-      className={`relative flex justify-between items-center w-screen p-5 bg-[#F3EEEA]`}
+      className={`relative flex justify-between items-center w-screen p-5 bg-[#F3EEEA] md:px-10`}
     >
       <Logo />
       <ul
