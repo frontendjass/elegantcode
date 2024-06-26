@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 import menuOpen from '../assets/menuOpen.svg';
 import menuClose from '../assets/menuClose.svg';
@@ -11,11 +12,8 @@ export default function Navbar() {
   const screenSize = window.innerWidth;
 
   useEffect(() => {
-      screenSize >= 769 ? setIsLarge(false) : setIsLarge(true);
-  }, [screenSize])
-
-
-
+    screenSize >= 769 ? setIsLarge(false) : setIsLarge(true);
+  }, [screenSize]);
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
@@ -28,22 +26,32 @@ export default function Navbar() {
 
   return (
     <>
-    <nav
-      className={`relative flex justify-between items-center w-screen p-5 bg-[#F3EEEA] md:px-10`}
-    >
-      <Logo />
-      <ul
-        className={`${menuStatus} bg-swirl-200 fixed top-1 flex flex-col justify-center items-center w-full h-screen z-[1]`}
+      <nav
+        className={`relative flex justify-between items-center w-screen p-5 bg-[#F3EEEA] md:px-10`}
       >
-        <NavbarLink name='Home' link='#home' onClick={handleClick} />
-        <NavbarLink name='Services' link='#services' onClick={handleClick} />
-        <NavbarLink name='Portfolio' link='#portfolio' onClick={handleClick} />
-        <NavbarLink name='Contact Me' link='#contact' onClick={handleClick} />
-      </ul>
-      <button onClick={handleClick} className='fixed right-5 z-10 bg-[#f3eeea79] p-2 rounded-full'>
-        <img src={menuLogo} alt='Menu logo' className='w-[40px]' />
-      </button>
-    </nav>
+        <Logo />
+        <ul
+          className={`${menuStatus} bg-swirl-200 fixed top-1 flex flex-col justify-center items-center w-full h-screen z-[1]`}
+        >
+          <NavbarLink name='Home' link='#home' onClick={handleClick} />
+          <NavbarLink name='Services' link='#services' onClick={handleClick} />
+          <NavbarLink
+            name='Portfolio'
+            link='#portfolio'
+            onClick={handleClick}
+          />
+          <NavbarLink name='Contact Me' link='#contact' onClick={handleClick} />
+        </ul>
+        <motion.button
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.1, type: 'spring', stiffness: 50 }}
+          onClick={handleClick}
+          className='fixed right-5 z-10 bg-[#f3eeea79] p-2 rounded-full'
+        >
+          <img src={menuLogo} alt='Menu logo' className='w-[40px]' />
+        </motion.button>
+      </nav>
     </>
   );
 }

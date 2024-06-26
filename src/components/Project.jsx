@@ -1,9 +1,11 @@
 import mockup from '../assets/macbook-mockup.avif';
 import Role from './Role';
 
+import { motion } from 'framer-motion';
+
 export default function Project({ number, title }) {
     return (
-        <article>
+        <motion.article initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} transition={{type: 'spring', delay: 0.2, y: 0, duration: 2}}>
             <header className={`flex flex-row-reverse justify-between items-baseline px-5 py-2`}>
                 <h3 className="text-4xl text-shark-950 font-playFair">{title}</h3>
                 <sm className='font-lora text-9xl'>{number}.</sm>
@@ -16,6 +18,6 @@ export default function Project({ number, title }) {
                     <Role roleTitle='Deployment' />
                 </ul>
             </div>
-        </article>
+        </motion.article>
     )
 }
