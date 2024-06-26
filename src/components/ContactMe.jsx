@@ -2,16 +2,24 @@ import FormButton from './FormButton';
 
 import formArt from '../assets/form-photo.png';
 
+import { motion } from 'framer-motion';
+
 export default function ContactMe() {
   const inputStyle = 'w-full p-2 my-1 font-lora';
 
   return (
-    <section className='bg-swirl-200 md:flex' id='contact'>
+    <motion.section
+      initial={{ y: 0 }}
+      whileInView={{ y: -50 }}
+      transition={{ type: 'spring' }}
+      className='bg-swirl-200 md:flex'
+      id='contact'
+    >
       <div className='bg-swirl-100 rounded-t-3xl md:px-10 py-5'>
         <div className='md:flex items-center'>
           <div className='lg:w-2/4'>
             <header className='px-5 pt-9'>
-              <h2 className='font-lora uppercase text-shark-950 text-5xl'>
+              <h2 className='font-lora uppercase text-shark-950 text-5xl mb-2'>
                 Let's Talk
               </h2>
               <p className='text-shark-950 font-lora'>
@@ -82,6 +90,6 @@ export default function ContactMe() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

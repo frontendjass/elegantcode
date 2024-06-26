@@ -11,7 +11,7 @@ export default function Hero() {
         className='h-[65vh] md:h-[80vh] w-full flex justify-center items-center'
       >
         <div className='relative w-[90vw] h-[90vw] md:w-[60vw] md:h-[60vw] lg:w-[40vw] lg:h-[40vw] rounded-full bg-swirl-200 flex flex-col justify-center items-center'>
-          <motion.h2 className='absolute top-8 right-4 font-lora italic'>
+          <motion.h2 initial={{scale: 0}} animate={{scale: 1}} transition={{delay: 1, duration: 0.5}} className='absolute top-8 right-4 font-lora italic'>
             Frontend Developer <br /> & Designer
           </motion.h2>
           <h1 className='text-center text-shark-950 uppercase text-4xl font-lora font-bold md:text-7xl md:w-[80vw]'>

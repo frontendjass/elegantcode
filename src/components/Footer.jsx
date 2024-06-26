@@ -2,16 +2,16 @@ import NavbarLink from "./NavbarLink";
 
 export default function Footer() {
     return (
-        <footer className="h-24 flex items-center justify-between">
-            <p className="text-swirl-50">© 2024 ElegantCode</p>
+        <footer className="flex items-center justify-between px-5 flex-col sm:flex-row pb-16 md:px-10">
             <nav>
-                <ul className="flex">
-                <NavbarLink name='About' link='#'/>
-                <NavbarLink name='Services' link='#'/>
-                <NavbarLink name='Portfolio' link='#'/>
-                <NavbarLink name='Contact Me' link='#'/>
+                <ul className="flex gap-2">
+                <NavbarLink name='About' link='#' footer/>
+                <NavbarLink name='Services' link='#' footer/>
+                <NavbarLink name='Portfolio' link='#' footer/>
+                <NavbarLink name='Contact Me' link='#' footer/>
                 </ul>
             </nav>
+            <p className="text-swirl-100">© 2024 ElegantCode</p>
         </footer>
     )
 }
