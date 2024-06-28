@@ -29,8 +29,8 @@ export default function Loader() {
           Elegant<span className='font-bold'>Code</span>{' '}
           <motion.span
             animate={{ y: -percentageY }}
-            transition={{type: 'spring'}}
-            className='text-swirl-300 text-xl inline-block'
+            transition={{ type: 'spring' }}
+            className='text-swirl-300 text-xl md:text-3xl w-14 inline-block'
           >
             {percentage}%
           </motion.span>
