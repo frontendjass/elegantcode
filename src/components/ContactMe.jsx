@@ -5,7 +5,7 @@ import formArt from '../assets/form-photo.png';
 import { motion } from 'framer-motion';
 
 export default function ContactMe() {
-  const inputStyle = 'w-full p-2 my-1 font-lora';
+  const inputStyle = 'w-full p-2 my-1 font-lora rounded-md';
 
   return (
     <motion.section
@@ -24,8 +24,7 @@ export default function ContactMe() {
               </h2>
               <p className='text-shark-950 font-lora'>
                 If you have any questions, comments, or project inquiries,
-                please don't hesitate to get in touch. Fill out the contact form
-                below, and I'll get back to you as soon as possible. Your
+                please don't hesitate to get in touch. Your
                 message is important, and I look forward to connecting with you.
                 Thank you!
               </p>
@@ -61,11 +60,12 @@ export default function ContactMe() {
                 </h4>
                 <div className='grid grid-cols-3 gap-4 grid-rows-2 md:grid-cols-4'>
                   <FormButton buttonText='A Website' />
-                  <FormButton buttonText='React Integration' />
-                  <FormButton buttonText='SEO' />
-                  <FormButton buttonText='UX/UI Design' />
-                  <FormButton buttonText='HTML Emails' />
                   <FormButton buttonText='A Redesign' />
+                  <FormButton buttonText='React Integration' />
+                  <FormButton buttonText='Animate React App' />
+                  <FormButton buttonText='UX/UI Design' />
+                  <FormButton buttonText='SEO' />
+                  <FormButton buttonText='HTML Emails' />
                   <FormButton buttonText='Something Else' />
                 </div>
               </div>
@@ -74,8 +74,8 @@ export default function ContactMe() {
                   Tell me about your vision:
                 </h4>
                 <textarea
-                  className='w-full min-h-40 p-2'
-                  placeholder='Describe your project goals, ideas, and desired outcomes. What are your key features? Who is your target audience? How do you envision the user experience? Feel free to share any specific requirements or inspirations.'
+                  className='w-full min-h-40 p-2 font-lora rounded-md'
+                  placeholder='Describe your project goals, ideas, and desired outcomes. Feel free to share any specific requirements or inspirations.'
                 ></textarea>
               </div>
               <div className='flex justify-end mt-2'>
